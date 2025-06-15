@@ -1,0 +1,62 @@
+{
+    "small_safe": {
+        "grid_size": 3,
+        "allow_types": ["collection"],
+        "grade_weights": {"1": 15, "2": 20, "3": 25, "4": 20, "5": 15, "6": 5},
+        "min_items": 1,
+        "max_items": 2,
+        "name": "小保险箱",
+        "icon": "resource/xbxx.png",
+        "rarity": 3
+    },
+    "large_safe": {
+        "grid_size": 5,
+        "allow_types": ["armor", "chest", "helmet", "collection", "bag"],
+        "grade_weights": {"1": 10, "2": 15, "3": 20, "4": 20, "5": 20, "6": 15},
+        "min_items": 2,
+        "max_items": 5,
+        "name": "大保险箱",
+        "icon": "resource/bxx.png",
+        "rarity": 4
+    },
+    "bird_nest": {
+        "grid_size": 3,
+        "allow_types": ["armor", "chest", "helmet", "collection", "bag"],
+        "grade_weights": {"1": 35, "2": 25, "3": 20, "4": 15, "5": 5, "6": 1},
+        "min_items": 1,
+        "max_items": 3,
+        "name": "鸟窝",
+        "icon": "resource/nw.png",
+        "rarity": 1
+    },
+    "air_box": {
+        "grid_size": 5,
+        "allow_types": ["armor", "chest", "helmet", "collection", "bag"],
+        "grade_weights": {"1": 10, "2": 15, "3": 20, "4": 25, "5": 20, "6": 10},
+        "min_items": 3,
+        "max_items": 5,
+        "name": "航空箱",
+        "icon": "resource/hkcwx.png",
+        "rarity": 3
+    },
+    "cnw": {
+        "grid_size": 2,
+        "allow_types": ["collection"],
+        "grade_weights": {"1": 35, "2": 30, "3": 20, "4": 10, "5": 4, "6": 1},
+        "min_items": 1,
+        "max_items": 2,
+        "name": "井盖",
+        "icon": "resource/cnw.png",
+        "rarity": 1
+    },
+    "gjcwx": {
+        "grid_size": 4,
+        "allow_types": ["armor", "chest", "helmet", "collection", "bag"],
+        "grade_weights": {"1": 15, "2": 20, "3": 25, "4": 20, "5": 15, "6": 5},
+        "min_items": 1,
+        "max_items": 3,
+        "name": "高级储物箱",
+        "icon": "resource/gjcwx.png",
+        "rarity": 3
+    }
+}
