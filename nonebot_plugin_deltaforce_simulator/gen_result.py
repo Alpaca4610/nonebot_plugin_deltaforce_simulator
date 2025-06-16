@@ -1,14 +1,38 @@
-import datetime
+import os
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+from nonebot import get_plugin_config
+from .config import Config
 import textwrap
 import json
 import random
 import httpx
+# import nonebot
 from io import BytesIO
 
-with open(Path(__file__).parent / 'container_configs.json', 'r', encoding='utf-8') as f:
-    CONTAINER_CONFIGS = json.load(f)
+
+# driver = get_driver()
+# config = nonebot.get_driver().config
+plugin_config = get_plugin_config(Config)
+
+
+try:
+    # 从环境变量获取配置路径
+    custom_config_path = plugin_config.deltaforce_sim_config
+    if custom_config_path and os.path.isfile(custom_config_path):
+        # 尝试从自定义路径加载
+        with open(custom_config_path, 'r', encoding='utf-8') as f:
+            CONTAINER_CONFIGS = json.load(f)
+    else:
+        # 使用默认路径
+        default_path = Path(__file__).parent / 'container_configs.json'
+        with open(default_path, 'r', encoding='utf-8') as f:
+            CONTAINER_CONFIGS = json.load(f)
+except (FileNotFoundError, json.JSONDecodeError, OSError) as e:
+    default_path = Path(__file__).parent / 'container_configs.json'
+    with open(default_path, 'r', encoding='utf-8') as f:
+        CONTAINER_CONFIGS = json.load(f)
+
 
 def load_font(font_size=24):
     """统一加载字体文件，支持错误回退机制"""

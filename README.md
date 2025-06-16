@@ -38,7 +38,7 @@
   pip install nonebot-plugin-random-reply
   ``` -->
 
-# 配置文件
+# 修改容器配置文
 修改[容器配置json文件container_configs.json](nonebot_plugin_deltaforce_simulator/container_configs.json)，实现自定义容器以及爆率，示例如下：
 
 ```
@@ -52,6 +52,10 @@
         "icon": "resource/xbxx.png",  // 容器图标图片的相对路径，图片可以从三角洲官网获取
         "rarity": 3  // 容器稀有度，1~5，数字越大越稀有
     },
+```
+然后在.env文件中添加自定义的json文件的绝对路径：
+```
+deltaforce_sim_config = "xxxxxxx"
 ```
 
 # 使用方法
