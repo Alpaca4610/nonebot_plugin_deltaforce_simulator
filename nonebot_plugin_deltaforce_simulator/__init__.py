@@ -5,7 +5,8 @@ import random
 from .gen_result import generate_result
 from nonebot.adapters.onebot.v11 import MessageEvent
 from nonebot import require, on_command
-
+from .config import Config
+from nonebot.plugin import PluginMetadata
 
 require("nonebot_plugin_saa")
 from nonebot_plugin_saa import Text, Image, MessageFactory
@@ -19,6 +20,20 @@ from nonebot.params import ArgPlainText
 # from nonebot.plugin import PluginMetadata
 from nonebot.typing import T_State
 
+__plugin_meta__ = PluginMetadata(
+    name="三角洲鼠鼠偷吃模拟器",
+    description="适用于nonebot的三角洲鼠鼠偷吃模拟器（开容器模拟器）机器人插件",
+    usage="""
+    发送“开始跑刀”开始，如有命令前缀需要添加
+    跑刀结果出来后，发送“还要吃”继续开容器，不需要添加命令前缀
+    跑刀结果出来后，发送其他任意信息撤离
+    """,
+    config=Config,
+    extra={},
+    type="application",
+    homepage="https://github.com/Alpaca4610/nonebot_plugin_deltaforce_simulator",
+    supported_adapters={"~onebot.v11"},
+)
 
 start = on_command("开始跑刀", block=True, priority=1)
 

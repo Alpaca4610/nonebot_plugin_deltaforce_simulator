@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-deltaforce-simulator"
-version = "0.0.1"
+version = "0.0.2"
 description = "适用于nonebot的三角洲鼠鼠偷吃模拟器（开容器模拟器）机器人插件"
 authors = ["Alpaca <202396298@qq.com>"]
 license = "MIT"
